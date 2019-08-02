@@ -6,13 +6,14 @@ from builtins import str
 from past.utils import old_div
 import matplotlib.pyplot as plt
 import json
+import os
 import sys
 import pylab
 from math import ceil, sqrt
 
 def plotOneFromDisk(jsonpath, label):
 
-    with open( sys.argv[1] ) as ref_sim:
+    with open(jsonpath) as ref_sim:
         ref_data = json.loads( ref_sim.read() )
 
     num_chans = ref_data["Header"]["Channels"]
@@ -43,8 +44,17 @@ def plotOneFromDisk(jsonpath, label):
 
 
 if __name__ == "__main__":
-    jsonpath = 'output/InsetChart.json'
-    label = '<no label>'
+    output_folder = 'output'
+    base_json_name = 'InsetChart.json'
+    fullpath = os.path.join(output_folder, base_json_name)
+    if os.path.exists(fullpath):
+        jsonpath = fullpath
+    elif os.path.exists(base_json_name):
+        jsonpath = base_json_name
+    else:
+        jsonpath = None
+
+    label = ''
     if len(sys.argv) >= 2:
         jsonpath = sys.argv[1]
     if len(sys.argv) >= 3:
