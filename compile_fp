@@ -1,0 +1,4 @@
+#!/bin/bash
+tic
+scons --Release --Disease=FP --jobs=12
+toc
