@@ -1,0 +1,2 @@
+#!/bin/bash
+python /u/cliffk/idm/bin/update_218_config_to_220.py

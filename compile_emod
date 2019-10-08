@@ -1,0 +1,5 @@
+#!/bin/bash
+# To build all, remove --Disease=FP
+tic
+scons --Release --jobs=12 --Disease=FP
+toc
