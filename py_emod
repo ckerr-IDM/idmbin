@@ -1,0 +1,1 @@
+python3 -c 'import ctypes; dtk=ctypes.CDLL("../../../build/x64/Release/Eradication/libcoreLib.so", mode=ctypes.RTLD_GLOBAL); run = dtk.RunFromPy; run()';
