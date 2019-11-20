@@ -1,5 +1,5 @@
 #!/bin/bash
 tic
-/u/cliffk/idm/dtktrunk/build/x64/Release/Eradication/Eradication $@ # Family planning
+/home/cliffk/idm/dtktrunk/build/x64/Release/Eradication/Eradication $@ # Family planning
 #/u/cliffk/idm/EMOD/build/x64/Release/Eradication/Eradication $@ # Everything else
 toc
