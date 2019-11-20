@@ -1,0 +1,2 @@
+#!/bin/bash
+pip install --index-url https://packages.idmod.org/api/pypi/pypi-production/simple $@
